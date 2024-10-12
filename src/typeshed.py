@@ -23,5 +23,5 @@ print(c[1])
 print(c["2"])
 del c[1]
 del c["2"]
-assert_type(c, dict)  # expect-type-error
-assert_type(c, Mapping)  # expect-type-error
+assert_type(c, dict)  # type: ignore
+assert_type(c, Mapping)  # type: ignore

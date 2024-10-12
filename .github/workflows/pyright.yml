@@ -11,21 +11,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
-          python-version: ${{ matrix.python-version }}
+          cache: 'poetry'
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
+          pip install poetry
+          echo "$(poetry env info --path)/bin" >> $GITHUB_PATH
           pip install pyright
-      - uses: jordemort/action-pyright@v1
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          reporter: github-pr-review
-          lib: true
-          level: error
-          filter_mode: added
-          fail_on_error: true
-          workdir: './src'
-          pyright_version: 'latest'
-          pyright_flags: '--verbose'
+      - uses: jakebailey/pyright-action@v2

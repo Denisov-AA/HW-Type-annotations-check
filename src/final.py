@@ -8,5 +8,5 @@ from typing import List, Final
 my_list: Final[List[int]] = []
 
 my_list.append(1)
-my_list = []  # expect-type-error
-my_list = "something else"  # expect-type-error
+my_list = []  # type: ignore
+my_list = "something else"  # type: ignore

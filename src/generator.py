@@ -17,4 +17,4 @@ from typing import assert_type
 generator = gen()
 assert_type(next(generator), int)
 generator.send("sss")
-generator.send(3)  # expect-type-error
+generator.send(3)  # type: ignore

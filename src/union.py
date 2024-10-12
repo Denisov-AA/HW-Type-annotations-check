@@ -13,4 +13,4 @@ def foo(x: Union[str, int]):
 foo("foo")
 foo(1)
 
-foo([])  # expect-type-error
+foo([])  # type: ignore

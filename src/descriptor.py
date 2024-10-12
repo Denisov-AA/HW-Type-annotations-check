@@ -34,5 +34,5 @@ def string_value(x: str) -> None:
 
 descriptor_self(TestClass.a)
 string_value(TestClass().a)
-descriptor_self(TestClass().a)  # expect-type-error
-string_value(TestClass.a)  # expect-type-error
+descriptor_self(TestClass().a)  # type: ignore
+string_value(TestClass.a)  # type: ignore

@@ -11,4 +11,4 @@ def foo(x: int):
 
 foo(10)
 
-foo("10")  # expect-type-error
+foo("10")  # type: ignore

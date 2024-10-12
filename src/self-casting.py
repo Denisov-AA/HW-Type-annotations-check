@@ -34,4 +34,4 @@ a: Any = 11111111
 b = example.transform_callable()(a, 1, "1", 1.0, d=False)
 assert_type(b, None)
 
-example.transform_callable()(1, "1", 1.0, d=False)  # expect-type-error
+example.transform_callable()(1, "1", 1.0, d=False)  # type: ignore

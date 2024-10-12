@@ -11,4 +11,4 @@ def foo_2(x: Dict[str, str]):
 
 
 foo_2({"foo": "bar"})
-foo_2({"foo": 1})  # expect-type-error
+foo_2({"foo": 1})  # type: ignore

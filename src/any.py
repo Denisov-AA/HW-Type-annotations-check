@@ -12,4 +12,4 @@ def foo(arg: Any):
 
 foo(1)
 foo("10")
-foo(1, 2)  # expect-type-error
+foo(1, 2)  # type: ignore

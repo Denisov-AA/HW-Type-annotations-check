@@ -40,5 +40,5 @@ def func_fail(foo: Foo) -> list[Any]:
     ...
 
 
-func_fail("1", "2")  # expect-type-error
-func_fail([1, 2, 3])  # expect-type-error
+func_fail("1", "2")  # type: ignore
+func_fail([1, 2, 3])  # type: ignore

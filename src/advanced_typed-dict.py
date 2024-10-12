@@ -19,7 +19,7 @@ class Undergraduate(Student):
 
 
 a: Undergraduate = {"name": "Tom", "age": 20, "school": "MIT", "major": "Math"}
-a: Undergraduate = {"name": "Tom", "age": 20, "school": "MIT"}  # expect-type-error
+a: Undergraduate = {"name": "Tom", "age": 20, "school": "MIT"}  # type: ignore
 assert Undergraduate(name="Tom", age=20, school="MIT", major="Math") == {
     "name": "Tom",
     "age": 20,

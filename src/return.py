@@ -12,4 +12,4 @@ def foo() -> int:
 from typing import assert_type
 
 assert_type(foo(), int)
-assert_type(foo(), str)  # expect-type-error
+assert_type(foo(), str)  # type: ignore

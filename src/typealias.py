@@ -13,5 +13,5 @@ def foo(v: Vector):
 
 
 foo([1.1, 2])
-foo(1)  # expect-type-error
-foo(["1"])  # expect-type-error
+foo(1)  # type: ignore
+foo(["1"])  # type: ignore

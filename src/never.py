@@ -11,7 +11,7 @@ def never_call_me(arg: Never):
 
 
 def int_or_str(arg: int | str) -> None:
-    never_call_me(arg)  # expect-type-error
+    never_call_me(arg)  # type: ignore
     match arg:
         case int():
             print("It's an int")

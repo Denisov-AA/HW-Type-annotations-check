@@ -25,5 +25,5 @@ async def async_function2() -> str:
 
 
 run_async(async_function())
-run_async(1)  # expect-type-error
-run_async(async_function2())  # expect-type-error
+run_async(1)  # type: ignore
+run_async(async_function2())  # type: ignore

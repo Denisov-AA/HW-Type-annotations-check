@@ -34,9 +34,9 @@ assert_type(process(b"42"), str)
 assert_type(process(42), tuple[int, str])
 assert_type(process(None), None)
 
-assert_type(process(42), str)  # expect-type-error
-assert_type(process(None), str)  # expect-type-error
-assert_type(process(b"42"), tuple[int, str])  # expect-type-error
-assert_type(process(None), tuple[int, str])  # expect-type-error
-assert_type(process(42), str)  # expect-type-error
-assert_type(process(None), str)  # expect-type-error
+assert_type(process(42), str)  # type: ignore
+assert_type(process(None), str)  # type: ignore
+assert_type(process(b"42"), tuple[int, str])  # type: ignore
+assert_type(process(None), tuple[int, str])  # type: ignore
+assert_type(process(42), str)  # type: ignore
+assert_type(process(None), str)  # type: ignore

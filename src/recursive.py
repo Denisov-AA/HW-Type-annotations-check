@@ -16,6 +16,6 @@ f({"foo": {}})
 f({"foo": {"bar": {}}})
 f({"foo": {"bar": {"baz": {}}}})
 
-f(1)  # expect-type-error
-f({"foo": []})  # expect-type-error
-f({"foo": {1: {}}})  # expect-type-error
+f(1)  # type: ignore
+f({"foo": []})  # type: ignore
+f({"foo": {1: {}}})  # type: ignore

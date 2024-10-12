@@ -39,7 +39,7 @@ foo(42, 2).upper()
 foo(True, 3).append(1)
 foo({}, "4").keys()
 
-foo("42", 1).upper()  # expect-type-error
-foo(42, 2).append(1)  # expect-type-error
-foo(True, 3).bit_length()  # expect-type-error
-foo({}, "4").upper()  # expect-type-error
+foo("42", 1).upper()  # type: ignore
+foo(42, 2).append(1)  # type: ignore
+foo(True, 3).bit_length()  # type: ignore
+foo({}, "4").upper()  # type: ignore

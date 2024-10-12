@@ -11,4 +11,4 @@ def foo(x: List[str]):
 
 
 foo(["foo", "bar"])
-foo(["foo", 1])  # expect-type-error
+foo(["foo", 1])  # type: ignore

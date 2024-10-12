@@ -28,9 +28,9 @@ def foo(value, mode: str) -> None:
 foo_with_person = transform(foo)
 foo_with_person(Person(), "1")
 foo_with_person(Person(), mode="1")
-foo_with_person(1, "1")  # expect-type-error
-foo_with_person(Person(), 1)  # expect-type-error
-foo_with_person(Person(), "1", 2)  # expect-type-error
+foo_with_person(1, "1")  # type: ignore
+foo_with_person(Person(), 1)  # type: ignore
+foo_with_person(Person(), "1", 2)  # type: ignore
 
 
 def foo2(value, mode: str, *, maybe: bool) -> int:
@@ -41,7 +41,7 @@ foo_with_person = transform(foo2)
 foo_with_person(Person(), "1", maybe=True)
 foo_with_person(value=Person(), mode="1", maybe=True)
 foo_with_person(Person(), mode="1", maybe=True)
-foo_with_person(Person(), mode="1")  # expect-type-error
-foo_with_person(Person(), 1, maybe=True)  # expect-type-error
-foo_with_person(Person(), "1", maybe=1)  # expect-type-error
-foo_with_person(Person(), "1", True)  # expect-type-error
+foo_with_person(Person(), mode="1")  # type: ignore
+foo_with_person(Person(), 1, maybe=True)  # type: ignore
+foo_with_person(Person(), "1", maybe=1)  # type: ignore
+foo_with_person(Person(), "1", True)  # type: ignore

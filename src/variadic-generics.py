@@ -17,4 +17,4 @@ b: Array[float, int] = Array()
 assert_type(a + b, Array[float, int])
 
 c: Array[float, int, str] = Array()
-assert_type(a + c, Array[float, int, str])  # expect-type-error
+assert_type(a + c, Array[float, int, str])  # type: ignore

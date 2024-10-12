@@ -28,5 +28,5 @@ def return_string(name: str) -> str:
 
 
 accept_single_string_input(string_name)
-accept_single_string_input(string_value)  # expect-type-error
-accept_single_string_input(return_string)  # expect-type-error
+accept_single_string_input(string_value)  # type: ignore
+accept_single_string_input(return_string)  # type: ignore

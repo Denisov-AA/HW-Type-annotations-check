@@ -20,6 +20,6 @@ def f():
 
 c = make_object(MyClass)
 c = make_object(int)
-c = make_object(f)  # expect-type-error
-c = make_object("sss")  # expect-type-error
-c = make_object(["sss"])  # expect-type-error
+c = make_object(f)  # type: ignore
+c = make_object("sss")  # type: ignore
+c = make_object(["sss"])  # type: ignore

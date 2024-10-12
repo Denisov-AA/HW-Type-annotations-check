@@ -29,6 +29,6 @@ read_buffer(b"foo")
 read_buffer(memoryview(b"foo"))
 read_buffer(array("l", [1, 2, 3, 4, 5]))
 read_buffer(MyBuffer(b"foo"))
-read_buffer("foo")  # expect-type-error
-read_buffer(1)  # expect-type-error
-read_buffer(["foo"])  # expect-type-error
+read_buffer("foo")  # type: ignore
+read_buffer(1)  # type: ignore
+read_buffer(["foo"])  # type: ignore

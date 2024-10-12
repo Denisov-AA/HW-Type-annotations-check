@@ -22,4 +22,4 @@ class Dog:
 
 
 duck: SupportsQuack = Duck()
-dog: SupportsQuack = Dog()  # expect-type-error
+dog: SupportsQuack = Dog()  # type: ignore

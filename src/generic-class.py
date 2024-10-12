@@ -23,5 +23,5 @@ from typing import assert_type
 s = Stack[int]()
 s.push(1)
 assert_type(s.pop(), int)
-s.push("foo")  # expect-type-error
-assert_type(s.pop(), str)  # expect-type-error
+s.push("foo")  # type: ignore
+assert_type(s.pop(), str)  # type: ignore

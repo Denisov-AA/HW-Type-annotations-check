@@ -23,6 +23,6 @@ def bar(c: int, d: str) -> None:
 foo(1, b="2")
 bar(c=1, d="2")
 
-foo(1, "2")  # expect-type-error
-foo(a=1, e="2")  # expect-type-error
-decorator(1)  # expect-type-error
+foo(1, "2")  # type: ignore
+foo(a=1, e="2")  # type: ignore
+decorator(1)  # type: ignore
