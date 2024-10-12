@@ -24,4 +24,4 @@ def bar(a: int, *, b: str) -> None:
 foo(1, b="2")
 foo(1, "2")  # type: ignore
 foo(a=1, e="2")  # type: ignore
-decorator(1)
+decorator(1)  # type: ignore
