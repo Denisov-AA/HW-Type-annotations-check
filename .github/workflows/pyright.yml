@@ -21,3 +21,5 @@ jobs:
           echo "$(poetry env info --path)/bin" >> $GITHUB_PATH
           pip install pyright
       - uses: jakebailey/pyright-action@v2
+        with:
+          working-directory: "./src"
