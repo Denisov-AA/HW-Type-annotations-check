@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "hw-type-annotations-check"
+version = "0.1.0"
+description = "HomeWork for Python training courses"
+authors = ["Andrey Denisov <andrey.denisov@indeed-id.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
