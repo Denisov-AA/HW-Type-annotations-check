@@ -1,0 +1,6 @@
+services:
+  type_check:
+    build:
+      dockerfile: Dockerfile
+    container_name: Andrei_Denisov_HW_type_check
+    command: make typing
